@@ -1,0 +1,159 @@
+<div id="main-container" class="">
+    <div class="jumbotron text-center header-wrap" align="center">
+        <h3 class="">User Policy Application</h3>
+        <!-- <p>Click on the buttons</p> -->
+        <div class="">
+            <ul class=" nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href = "#uploadFileTab">Upload File</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#searchPolicyTab">Search Policy By UserName</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#scheduleMsgTab">Schedule Message</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#aggregatePolicyTab">Aggregate Policy</a></li>
+                
+            </ul>
+            
+            <div class="tab-content">
+                <div id="uploadFileTab" class="tabcontent tab-pane fade in active">
+                   <div>
+                        <span id="post-item" class="btn">Upload File</span>
+                    </div>
+
+                </div>
+
+                <div id="searchPolicyTab" class="tabcontent tab-pane fade">
+                   
+                    <div class="form-inline">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Enter User Name" aria-label="Search" id="searchUser" autocomplete="off">
+                        <button  id="searchUserInfo" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+                    </div>
+
+                    <table class="table" style="margin-top: 20px;">
+                        <thead>
+                            <tr>
+                              <th scope="col">User Name</th>
+                              <th scope="col">Policy Number</th>
+                              <th scope="col">Policy Start Date</th>
+                              <th scope="col">Policy End Date</th>
+                              <th scope="col">Category Name</th>
+                              <th scope="col">Company Name</th>
+                            </tr>
+                        </thead>
+                        <tbody id="prepenfData">
+                      </tbody>
+                    </table>
+                </div>
+
+                <div id="scheduleMsgTab" class="tabcontent tab-pane fade">
+                      <div>
+                        <span id="scheduleMsg" class="btn">ScheduleYourMessage</span>
+                    </div>
+                </div>
+
+                <div id="aggregatePolicyTab" class="tabcontent tab-pane fade">
+                      <div>
+                        <span id="aggregatePolicy" class="btn">Aggregate policy By User</span>
+                    </div>
+
+                    <table class="table" style="margin-top: 20px;">
+                        <thead>
+                            <tr>
+                              <th scope="col">User Name</th>
+                              <th scope="col">Policy Number</th>
+                              <th scope="col">Policy Start Date</th>
+                              <th scope="col">Policy End Date</th>
+                              <!-- <th scope="col">Category Name</th> -->
+                              <th scope="col">Company Name</th>
+                              <th scope="col">Premium Ammount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="aggrgateusersHldr">
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="postItemModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">File Upload Form</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- <p>Some text in the modal.</p> -->
+                    <form id = "">
+                        <div class="form-group">
+                            <label for="uploadFile">UploadYourFile</label>
+                            <input type="file" class="form-control" id="uploadFile" autocomplete="off" name="uploadFile">
+                        </div>
+                    </form>
+                    <span id="closeUploadModal" class="scheduleFormSaveCls">Close</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div id="scheduleMsgModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Schedule Your Message</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- <p>Some text in the modal.</p> -->
+                    <form id = "">
+                        <div class="form-group">
+                            <label for="selectDate">Select your day</label>
+                            <input type="text" class="form-control" id="selectDate" autocomplete="off" name="selectDate" placeholder="Select Date">
+                        </div>
+                        <div class="form-group">
+                            <label for="selectTime">Select your time</label>
+                            <input type="text" class="form-control" id="selectTime" autocomplete="off" name="selectTime" placeholder="Select Time">
+                        </div>
+                        <div class="form-group">
+                            <label for="enterMsg">Enter Your Message</label>
+                            <textarea type="text" class="form-control" id="enterMsg" autocomplete="off" name="enterMsg" placeholder="Enter your Message"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <span id="saveScheduleData" class=" btn btn-success">Save</span>
+                    <span id="closeScheduleForm" class="btn btn-warning">Cancel</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="aggregatePolicyMoadal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Aggregate Policies</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- <p>Some text in the modal.</p> -->
+                    <form id = "">
+                        <div class="form-group">
+                            <label for="aggregateUserName">Enter User Name</label>
+                            <input type="text" class="form-control aggregateUserCls" id="aggregateUserName" autocomplete="off" name="aggregateUserName" placeholder="Enter User Name">
+                            <span id="addUserNames" class="addAggregateCls" title="Add User Name"></span>
+                        </div>
+                        <div id="aggregateusersHldr"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                     <span id="performAggregate" class="btn btn-success">Aggregate</span>
+                    <span id="closeAggregateForm" class="btn btn-warning">Cancel</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

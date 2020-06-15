@@ -1,0 +1,299 @@
+.jumbotron {
+    background: rgba(0, 0, 0, 0);
+    /* color:white; */
+}
+
+.modal {
+    color: black;
+}
+
+.btn {
+    color: white;
+    background: #00adb5;
+    border: 1px solid white;
+}
+
+.itemsRent {
+    width: 23rem;
+    background: rgba(0, 0, 0, 0);
+    /* opacity:0.95;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rentModal {
+    /* opacity:0.9; */
+    text-align: center;
+    color: gray;
+}
+
+#rentModalFooter {
+    background-color: orange;
+    border-color: orange;
+    color: black;
+}
+
+.cards-wrap {
+    margin-top: 10%;
+}
+.item-card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    color: #000;
+}
+.price-wrap {
+    position: absolute;
+    right: -32px;
+    top: -24px;
+    width: 75px;
+    height: 75px;
+    background-color: #00adb5;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    padding-top: 20px;
+    padding-left: 6px;
+    color: #fff;
+    font-size: 22px;
+}
+
+#account-form,
+.header-wrap,
+#create-form,
+.create-acct-wrap {
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+#update-err-msg {
+    color: red !important;
+}
+
+#create-err-msg {
+    color: red !important;
+}
+
+#go-home {
+    width: auto;
+    height: 65px;
+}
+
+.container {
+    /*padding-bottom: 2%;*/
+    /*margin-top: 10%;*/
+    /*background: rgba(86, 101, 115,.6);*/
+    height: 100%;
+    border-radius: 0.25rem;
+    /*margin-bottom: 2%;*/
+}
+
+.card-body {
+    color: white;
+}
+
+.card-img-top {
+    width: 70%;
+    background: white;
+    margin-top: 22px;
+}
+.card-title {
+    font-size: 1.8em;
+}
+
+[data-search="true"] {
+    color: white !important;
+}
+[data-post="true"] {
+    color: white !important;
+}
+[data-account="true"] {
+    color: white !important;
+}
+[data-signup="true"] {
+    color: white !important;
+}
+
+.lead {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.accountID h2,
+.header-wrap h1 {
+    text-transform: capitalize;
+}
+hr {
+    background-color: #fff !important;
+}
+.signupFormHldrCls {
+    width: 50%;
+    margin: auto !important;
+}
+.signupFormCls {
+    width: 50%;
+    margin: auto !important;
+}
+.inputFieldCls {
+    display: inline-block !important;
+    width: 100%;
+}
+.formHeadingCls {
+    text-align: center;
+}
+.logoutClss {
+    background-image: url("../Images/logout.svg");
+    width: 38px;
+    height: 37px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -2px;
+    float: right;
+    background-position: center center;
+    border: none;
+    background-color: white;
+    right: -101px;
+}
+.policySearchCls {
+    display: inline-block; */
+    /* border: 10px; */
+    padding: 03px 25px;
+    margin: auto;
+    box-shadow: 10px;
+    box-shadow: 2px 2px 2px 2px #888888;
+    background: black;
+    color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.scheduleFormSaveCls{
+    width: 49%;
+    padding: 10px 10px;
+    display: inline-block;
+    background-color: #2b2626;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+
+
+/* Style the tab content */
+.tabcontent {
+  padding: 16px 12px;
+  margin: 15px;
+}
+.tabs a:hover { background-color:#bbb; }
+.tablinks{
+    width: 30%;
+    padding: 11px;
+    margin: 10px;
+    background-color: #00adb5;
+    font-weight: 900;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+  background-color: transparent;}
+.policyInfoCls{
+    padding: 10px;
+    margin: 5px;
+    /* width: 100%; */
+    background-color: black;
+    color: white;
+}
+.policyInfoHldrCls{
+    top: 8px;
+    margin: 21px;
+    padding: 0px;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+.frgCls{
+    display: inline-block;
+    list-style: none;
+    padding: 9px;
+    width: 160px;
+}
+.frgHldrCls{
+    display: inline-block;
+}
+.addAggregateCls{
+    background-image: url("../Images/plus.svg");
+    width: 38px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 63%;
+    display: inline-block;
+    margin: auto;
+    position: relative;
+    top: -2px;
+    float: right;
+    background-position: center center;
+    border: none;
+    background-color: white;
+    border-radius: 50%
+    /*right: -101px;*/
+}
+.aggregateUserCls{
+    width: 64% !important;
+    display: inline-block !important;
+}
+.userCls{
+     display: inline-block;
+    list-style: none;
+    padding: 9px;
+    width: 40%;
+    cursor: pointer;
+}
+
+.removeUserCls{
+    background-image: url("../Images/delete.svg");
+    width: 22px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: 62%;
+    display: inline-block;
+    margin: auto;
+    position: relative;
+    top: -2px;
+    background-position: center center;
+    border: none;
+    background-color: white;
+    border-radius: 50%
+}
