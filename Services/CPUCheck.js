@@ -12,22 +12,10 @@ module.exports = function CPUCheck(instance){
 			      return console.log(err);
 			    }
 			    var stats  = parseFloat(percent).toFixed(2);
-			    console.log('cpuStats---',stats);
-			    if(stats > 50){
+			    console.log('cpu usages: ',stats);
+			    if(stats > 70){
 			    	console.log('---restaring server again----');
-			    	// setTimeout(function () {
-				    //     process.on("exit", function () {
-				    //     	console.log('--process.argv---',process.argv)
-				    //         require("child_process").spawn(process.argv.shift(), process.argv, {
-				    //             cwd: process.cwd(),
-				    //             detached : true,
-				    //             stdio: "inherit"
-				    //         });
-				    //     });
-				    //     process.exit();
-				    // }, 3000);
-				     process.exit(1);
-
+				    process.exit(1);
 			    }
 			    setTimeout(checkCPUStatus,5*1000);
 			});

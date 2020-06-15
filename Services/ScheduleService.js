@@ -26,7 +26,7 @@ module.exports = function ScheduleService(instance) {
 		var time = data.time.split(":");
 		data.month = date.getMonth() + 1;
 		data.day = date.getDate();
-		console.log("-----data---", data);
+		// console.log("-----data---", data);
 		var rule = time[1] +" "+time[0] +" " +data.day +" " +data.month +" " +"*";
 		
 		var job = scheduler.scheduleJob(rule, () => {
