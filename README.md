@@ -11,8 +11,6 @@ To use this app please run npm start or node server.
 
 > forever server.js, forever logs server.js
 
-and app will start listening on 3000 port.
-and in browser u can get by localhost:3000.
-to perform task please click on tabs.
+and app will on 3000 port.
 
 
