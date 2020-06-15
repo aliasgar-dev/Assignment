@@ -134,9 +134,11 @@ function searchUserInfo() {
       }
       $("#searchUser").val("");
       if(data.result && data.result.length>0){
+        console.table('--searched data--',data.result)
         renderPolicyInfo(data.result);
       }
       else{
+        $("#prepenfData").empty();
         console.log('-----no user found ----')
       }
     },
