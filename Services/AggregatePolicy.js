@@ -24,7 +24,7 @@ module.exports = function AggregatePolicy(instance){
 	}
 
 	function getAggregatePolicies(data,cb){
-
+		console.log('----gaa---',data)
 		var allPolicyInfo = {}
 		var userNames = data.userArr;
 		if(userNames && userNames.length == 0){

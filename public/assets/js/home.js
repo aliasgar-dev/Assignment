@@ -33,7 +33,11 @@ function getScheduleFormData() {
 
 function handleSaveScheduleData() {
   var formInfo = getScheduleFormData();
-
+  let time = formInfo.time.split(":");
+  formInfo.minute = time[1]
+  formInfo.hr = time[0];
+  let date = new Date(formInfo.date);
+  formInfo.day = date.getDate();
   $.ajax({
     type: "post",
     url: "/scheduleMsg",
@@ -183,9 +187,10 @@ function performAggregate(){
     return;
   }
   $.ajax({
-    type: "get",
+    type: "post",
     url: "/aggeregateUser",
     data: {userArr:userArr},
+    dataType:"json",
     success: function (data) {
     
       if (data && data.err) {

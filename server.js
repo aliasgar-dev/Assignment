@@ -122,14 +122,15 @@ function handleAllRoute(){
         });
     });
 
-    d.app.get("/aggeregateUser", (req, res) => {
+    d.app.post("/aggeregateUser", (req, res) => {
         d.getService("AggregatePolicy", function (err, aggrePolicy) {
+            console.log('dfdfdfd',req.body)
             if (err) {
                 console.log("--------error while SearchUserInfo service--", err);
                 throw err;
             } 
             else {
-                aggrePolicy.getAggregatePolicies(req.query, (err, result) => {
+                aggrePolicy.getAggregatePolicies(req.body, (err, result) => {
                     if (err) {
                         res.send({ err, result });
                     } else {

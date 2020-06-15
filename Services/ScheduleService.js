@@ -22,12 +22,12 @@ module.exports = function ScheduleService(instance) {
 	}
 
 	function scheduleMessage(data, cb) {
-		var date = new Date(data.date);
-		var time = data.time.split(":");
-		data.month = date.getMonth() + 1;
-		data.day = date.getDate();
-		// console.log("-----data---", data);
-		var rule = time[1] +" "+time[0] +" " +data.day +" " +data.month +" " +"*";
+		// var date = new Date(data.date);
+		// var time = data.time.split(":");
+		// data.month = date.getMonth() + 1;
+		// data.day = date.getDate();
+		console.log("-----data---", data);
+		var rule = data.minute +" "+data.hr +" " +data.day +" " +"*" +" " +"*";
 		
 		var job = scheduler.scheduleJob(rule, () => {
 			
