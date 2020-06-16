@@ -27,16 +27,22 @@ module.exports = function ScheduleService(instance) {
 		// data.month = date.getMonth() + 1;
 		// data.day = date.getDate();
 		console.log("-----data---", data);
-		var rule = data.minute +" "+data.hr +" " +data.day +" " +"*" +" " +"*";
-		
-		var job = scheduler.scheduleJob(rule, () => {
+		if(data && data.hr && data.minute && data.day){
+			var rule = data.minute +" "+data.hr +" " +data.day +" " +"*" +" " +"*";
 			
-			mongoService.save("Schedule", { message: data.msg }, (err, res) => {
-				console.log("data saved after schedule----");
-				job.cancel();
+			var job = scheduler.scheduleJob(rule, () => {
+				
+				mongoService.save("Schedule", { message: data.msg }, (err, res) => {
+					console.log("data saved after schedule----");
+					job.cancel();
+				});
 			});
-		});
-		cb(null, true);
+			cb(null, true);
+		}
+		else{
+			cb({reason:"please enter data correctly"},null);
+			return;
+		}
 	}
 
 	this.initialise = initialise;

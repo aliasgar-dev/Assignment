@@ -22,7 +22,10 @@ module.exports = function UploadFileService(instance) {
 	}
 
 	function uploadFile(fileInfo ,cb) {
-		
+		if(!fileInfo || !fileInfo.fileName){
+			cb({reason:"please select csv file to upload"},null);
+			return;
+		}
 		csv().fromFile(appConfig.uploadFilePath + "/" + fileInfo.fileName)
 		.then((jsonObj) => {
 			saveFilesData(jsonObj, cb);

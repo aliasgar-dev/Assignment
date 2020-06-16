@@ -28,7 +28,7 @@ module.exports = function AggregatePolicy(instance){
 		var allPolicyInfo = {}
 		var userNames = data.userArr;
 		if(userNames && userNames.length == 0){
-			cb(null,allPolicyInfo);
+			cb({reason:"please add userNames to aggregate"},allPolicyInfo);
 			return;
 		}
 		async.mapSeries(userNames,getPolicyforEachUser,function(err,res){

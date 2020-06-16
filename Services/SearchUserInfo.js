@@ -23,7 +23,7 @@ module.exports = function SearchUserInfo(instance) {
 
 	function searchUserInfo(data, cb) {
 		if (data && data.text === "") {
-			cb({ reason: "please enter text" }, null);
+			cb({ reason: "please enter user name to search" }, null);
 			return;
 		}
 		var text = data.text;
