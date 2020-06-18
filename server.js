@@ -9,7 +9,6 @@ var config = {
     port: 3000,
     appPath: __dirname,
     servicesPath: {
-        coreServicePath: __dirname + "/./coreServices",
         servicePath: __dirname + "/./Services/"
     },
     appConfigPath: __dirname + "/./appConfig.json",
@@ -124,7 +123,7 @@ function handleAllRoute(){
 
     d.app.post("/aggeregateUser", (req, res) => {
         d.getService("AggregatePolicy", function (err, aggrePolicy) {
-            console.log('dfdfdfd',req.body)
+            // console.log('dfdfdfd',req.body)
             if (err) {
                 console.log("--------error while SearchUserInfo service--", err);
                 throw err;

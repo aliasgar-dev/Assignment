@@ -39,8 +39,6 @@ module.exports = function MyService(config) {
         app.use(bodyParser.urlencoded({extended:true}));
         app.use(bodyParser.json());
         app.use(cors())
-        // require(config.appRoutesPath + "/account-controller")(self,app);
-       
         listenPort(cb);
         // cb(null,true)
     }
